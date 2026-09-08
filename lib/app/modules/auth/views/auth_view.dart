@@ -1,15 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:promtora/exportfile.dart';
 
-import 'package:get/get.dart';
-import 'package:promtora/app/modules/business/views/business_view.dart';
-import 'package:promtora/app/modules/coding/views/coding_view.dart';
-import 'package:promtora/app/modules/education/views/education_view.dart';
-import 'package:promtora/app/widgets/coustombutton.dart';
-
-import '../../imagecreation/views/imagecreation_view.dart';
-import '../../marketing/views/marketing_view.dart';
-import '../../writing/views/writing_view.dart';
-import '../controllers/auth_controller.dart';
 
 class AuthView extends GetView<AuthController> {
   const AuthView({super.key});

@@ -1,7 +1,5 @@
 import 'package:promtora/exportfile.dart';
 
-import '../../../widgets/PromptCard.dart';
-import '../controllers/imagecreation_controller.dart';
 
 class ImagecreationView extends GetView<ImagecreationController> {
   const ImagecreationView({super.key});

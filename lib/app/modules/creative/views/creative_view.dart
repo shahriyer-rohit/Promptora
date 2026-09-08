@@ -1,6 +1,4 @@
 import 'package:promtora/exportfile.dart';
-import '../../../widgets/PromptCard.dart';
-import '../controllers/creative_controller.dart';
 
 class CreativeView extends GetView<CreativeController> {
   const CreativeView({super.key});

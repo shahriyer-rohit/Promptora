@@ -1,6 +1,6 @@
 import 'package:promtora/exportfile.dart';
-import '../../../widgets/PromptCard.dart';
-import '../controllers/marketing_controller.dart';
+
+
 
 class MarketingView extends GetView<MarketingController> {
   const MarketingView({super.key});

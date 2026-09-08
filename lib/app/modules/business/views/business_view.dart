@@ -1,7 +1,5 @@
-import '../../../widgets/commonpage.dart';
-import '../controllers/business_controller.dart';
 import 'package:promtora/exportfile.dart';
-import '../../../widgets/PromptCard.dart';
+
 
 class BusinessView extends GetView<BusinessController> {
   const BusinessView({super.key});

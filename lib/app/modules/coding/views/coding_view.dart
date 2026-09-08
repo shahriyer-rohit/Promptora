@@ -1,7 +1,4 @@
 import 'package:promtora/exportfile.dart';
-import '../../../widgets/PromptCard.dart';
-import '../controllers/coding_controller.dart';
-
 class CodingView extends GetView<CodingController> {
   const CodingView({super.key});
   @override
