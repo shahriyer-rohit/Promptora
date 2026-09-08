@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:promtora/app/modules/business/views/business_view.dart';
+import 'package:promtora/app/modules/coding/views/coding_view.dart';
+import 'package:promtora/app/modules/education/views/education_view.dart';
 import 'package:promtora/app/widgets/coustombutton.dart';
 
+import '../../imagecreation/views/imagecreation_view.dart';
+import '../../marketing/views/marketing_view.dart';
+import '../../writing/views/writing_view.dart';
 import '../controllers/auth_controller.dart';
 
 class AuthView extends GetView<AuthController> {
@@ -16,15 +22,12 @@ class AuthView extends GetView<AuthController> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              decoration: BoxDecoration(
-
-              ),
+              decoration: BoxDecoration(),
               padding: const EdgeInsets.all(15),
               child: Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
-
                 ),
               ),
             ),
@@ -33,51 +36,63 @@ class AuthView extends GetView<AuthController> {
               height: 15,
             ),
 
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 30,
+                  vertical: 120,
+                ),
+                child: GridView.count(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 15,
+                  mainAxisSpacing: 30,
+                  childAspectRatio: 2.5,
+                  children: [
+                    CustomButton(
+                      text: 'Coding & Development',
+                      onPressed: () {
+                        Get.to(() => const CodingView());
+                      },
+                    ),
 
+                    CustomButton(
+                      text: 'Writing & Content',
+                      onPressed: () {
+                        Get.to(() => const WritingView());
+                      },
+                    ),
 
+                    CustomButton(
+                      text: 'Marketing & SEO',
+                      onPressed: () {
+                        Get.to(() => const MarketingView());
+                      },
+                    ),
 
+                    CustomButton(
+                      text: 'Image & Creative AI',
+                      onPressed: () {
+                        Get.to(() => const ImagecreationView());
+                      },
+                    ),
 
-           const CustomButton(
-             text: 'Coding & Development',
-           ),
-            const SizedBox(
-              height: 15,
+                    CustomButton(
+                      text: 'Business & Productivity',
+                      onPressed: () {
+                        Get.to(() => const BusinessView());
+                      },
+                    ),
+
+                    CustomButton(
+                      text: 'Education & Research',
+                      onPressed: () {
+                        Get.to(() => const EducationView());
+                      },
+                    ),
+                  ],
+                ),
+              ),
             ),
-
-            const CustomButton(
-              text: 'Writing & Content',
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-
-            const CustomButton(
-              text: 'Marketing & SEO',
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-
-            const CustomButton(
-              text: 'Image & Creative AI',
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-
-            const CustomButton(
-              text: 'Business & Productivity',
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-
-
-            const CustomButton(
-              text: 'Education & Research',
-            ),
-
-
           ],
         ),
       ),

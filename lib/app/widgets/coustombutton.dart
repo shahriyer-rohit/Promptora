@@ -4,8 +4,13 @@ class CustomButton extends StatefulWidget {
   const CustomButton({
     super.key,
     required this.text,
+    this.onPressed,
+
   });
   final String text;
+  final VoidCallback? onPressed;
+
+
   @override
   State<CustomButton> createState() => _CustomButtonState();
 }
@@ -26,7 +31,10 @@ class _CustomButtonState extends State<CustomButton> {
             isClicked = false;
           });
         });
+        widget.onPressed?.call();
       },
+
+
       style: ElevatedButton.styleFrom(
         backgroundColor: isClicked ? Colors.grey : Colors.blue,
       ),
