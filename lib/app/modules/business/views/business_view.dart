@@ -1,24 +1,15 @@
-import 'package:flutter/material.dart';
-
-import 'package:get/get.dart';
-
+import '../../../widgets/commonpage.dart';
 import '../controllers/business_controller.dart';
+import 'package:promtora/exportfile.dart';
 
 class BusinessView extends GetView<BusinessController> {
   const BusinessView({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('BusinessView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'BusinessView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+    return const CategoryPage(
+      title: 'Business & Productivity',
+      description: 'Explore business and productivity prompts.',
     );
   }
 }
