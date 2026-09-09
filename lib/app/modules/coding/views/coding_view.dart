@@ -26,45 +26,80 @@ class CodingView extends GetView<CodingController> {
             ),
 
             const SizedBox(height: 20),
-            PromptCard(
-              title: 'AI Image Generator',
-              description: 'Create beautiful images using AI.',
-              category: 'Image Creation',
-              rating: 4.8,
-              uses: 120,
-            ),
-            const SizedBox(height: 15),
-            PromptCard(
-              title: 'Product Image Creator',
-              description: 'Generate professional product images.',
-              category: 'Image Creation',
-              rating: 4.7,
-              uses: 250,
-            ),
-            const SizedBox(height: 15),
-            PromptCard(
-              title: 'Product Image Creator',
-              description: 'Generate professional product images.',
-              category: 'Image Creation',
-              rating: 4.7,
-              uses: 250,
-            ),
-            const SizedBox(height: 15),
-            PromptCard(
-              title: 'Product Image Creator',
-              description: 'Generate professional product images.',
-              category: 'Image Creation',
-              rating: 4.7,
-              uses: 250,
-            ),
-            const SizedBox(height: 15),
-            PromptCard(
-              title: 'Product Image Creator',
-              description: 'Generate professional product images.',
-              category: 'Image Creation',
-              rating: 4.7,
-              uses: 250,
-            ),
+
+
+            Column(
+              children: [
+
+
+                const SizedBox(height: 15),
+
+
+                Stack(
+                  children: [
+
+                    SizedBox(
+                      height: 250,
+                      child: PageView(
+                        children: [
+                          PromptCard(
+                            title: 'AI Coding Assistant',
+                            description: 'Generate clean and efficient code.',
+                            category: 'Coding',
+                            rating: 4.8,
+                            uses: 120,
+                          ),
+
+                          PromptCard(
+                            title: 'Flutter Developer',
+                            description: 'Create Flutter code with best practices.',
+                            category: 'Coding',
+                            rating: 4.7,
+                            uses: 95,
+                          ),
+
+                          PromptCard(
+                            title: 'Code Reviewer',
+                            description: 'Review and improve your code.',
+                            category: 'Coding',
+                            rating: 4.9,
+                            uses: 150,
+                          ),
+                          PromptCard(
+                            title: 'AI Coding Assistant',
+                            description: 'Generate clean and efficient code.',
+                            category: 'Coding',
+                            rating: 4.8,
+                            uses: 120,
+                          ),
+                          PromptCard(
+                            title: 'AI Coding Assistant',
+                            description: 'Generate clean and efficient code.',
+                            category: 'Coding',
+                            rating: 4.8,
+                            uses: 120,
+                          ),
+                          PromptCard(
+                            title: 'AI Coding Assistant',
+                            description: 'Generate clean and efficient code.',
+                            category: 'Coding',
+                            rating: 4.8,
+                            uses: 120,
+                          ),
+                          PromptCard(
+                            title: 'AI Coding Assistant',
+                            description: 'Generate clean and efficient code.',
+                            category: 'Coding',
+                            rating: 4.8,
+                            uses: 120,
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                )
+              ],
+            )
           ],
         ),
       ),
