@@ -19,110 +19,128 @@ class PromptCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 3,
+      margin: EdgeInsets.zero,
+      elevation: 2,
+      shadowColor: const Color(0x1A1E1B4B),
+      color: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: const BorderSide(
+          color: Color(0xFFE5E7EB),
+        ),
+      ),
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
-            // Title
             Text(
               title,
               style: const TextStyle(
-                fontSize: 20,
+                color: Color(0xFF1E1B4B),
+                fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
             ),
-
             const SizedBox(height: 12),
-
-            // Tags
-            Row(
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
               children: [
-
                 Container(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 7,
+                    horizontal: 10,
+                    vertical: 6,
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
+                    color: const Color(0xFFEFF1FF),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: const Text('ChatGPT'),
+                  child: const Text(
+                    'ChatGPT',
+                    style: TextStyle(
+                      color: Color(0xFF4338CA),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                 ),
-
-                const SizedBox(width: 8),
-
                 Container(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 7,
+                    horizontal: 10,
+                    vertical: 6,
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
+                    color: Color(0xFFF3F4F6),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Text(category),
+                  child: Text(
+                    category,
+                    style: const TextStyle(
+                      color: Color(0xFF4B5563),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                 ),
               ],
             ),
-
-            const SizedBox(height: 15),
-
-            // Description
+            const SizedBox(height: 12),
             Text(
               description,
               style: const TextStyle(
-                fontSize: 15,
-                color: Colors.grey,
+                color: Color(0xFF6B7280),
+                fontSize: 14,
+                height: 1.4,
               ),
             ),
-
-            const SizedBox(height: 15),
-
-            const Divider(),
-
-            const SizedBox(height: 8),
-
-            // Bottom information
+            const SizedBox(height: 16),
+            const Divider(
+              color: Color(0xFFE5E7EB),
+              height: 1,
+            ),
+            const SizedBox(height: 12),
             Row(
               children: [
-
                 const Icon(
-                  Icons.star_border,
+                  Icons.star,
+                  color: Color(0xFFF59E0B),
+                  size: 18,
                 ),
-
-                const SizedBox(width: 5),
-
+                const SizedBox(width: 6),
                 Text(
                   rating.toString(),
                   style: const TextStyle(
+                    color: Color(0xFF1E1B4B),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-
-                const SizedBox(width: 15),
-
+                const SizedBox(width: 12),
                 Text(
                   '$uses uses',
                   style: const TextStyle(
-                    color: Colors.grey,
+                    color: Color(0xFF6B7280),
+                    fontSize: 13,
                   ),
                 ),
-
                 const Spacer(),
-
-                const Icon(Icons.copy_outlined),
-
-                const SizedBox(width: 15),
-
-                const Icon(Icons.bookmark_border),
-
-                const SizedBox(width: 15),
-
-                const Icon(Icons.share_outlined),
+                const Icon(
+                  Icons.copy_outlined,
+                  color: Color(0xFF6B7280),
+                  size: 20,
+                ),
+                const SizedBox(width: 16),
+                const Icon(
+                  Icons.bookmark_border,
+                  color: Color(0xFF6B7280),
+                  size: 20,
+                ),
+                const SizedBox(width: 16),
+                const Icon(
+                  Icons.share_outlined,
+                  color: Color(0xFF6B7280),
+                  size: 20,
+                ),
               ],
             ),
           ],
